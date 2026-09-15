@@ -23,7 +23,7 @@
             
             aboutMe: "ดิฉันมีความสนใจและความมุ่งมั่นอย่างแรงกล้าที่จะเข้าศึกษาต่อในคณะเทคนิคการแพทย์ สาขารังสีเทคนิค เนื่องจากมองเห็นว่างานด้านรังสีวินิจฉัยและรังสีรักษาเป็นหัวใจสำคัญอย่างยิ่งในกระบวนการทางการแพทย์ยุคใหม่ เปรียบเสมือนดวงตาของแพทย์ที่ช่วยเปิดมุมมองภายในร่างกายของผู้ป่วยเพื่อการวินิจฉัยโรคได้อย่างแม่นยำและทันท่วงที\n\nจุดเริ่มต้นของแรงบันดาลใจเกิดจากการได้ศึกษาเรียนรู้ด้านวิทยาศาสตร์ ฟิสิกส์ และกายวิภาคศาสตร์ ซึ่งทำให้เห็นถึงการนำเทคโนโลยีขั้นสูงมาประยุกต์ใช้เพื่อช่วยชีวิตมนุษย์ ประกอบกับความตั้งใจที่อยากจะเป็นส่วนหนึ่งในการดูแลผู้ป่วยด้วยความใส่ใจ คำนึงถึงหลักความปลอดภัยทางรังสี (ALARA Principle) เพื่อให้ผู้ป่วยได้รับผลการตรวจที่มีประสิทธิภาพสูงสุดและปลอดภัยที่สุด ดิฉันพร้อมที่จะทุ่มเทและพัฒนาตนเองทั้งในด้านวิชาการและทักษะการปฏิบัติงานจริง เพื่อก้าวไปสู่การเป็นนักรังสีเทคนิคที่มีคุณภาพและสร้างประโยชน์ให้แก่สังคมในอนาคต",
 
-            // 3. ช่องทางติดต่อ (เพิ่มข้อมูลตรงนี้ได้เลยครับ)
+            // 3. ช่องทางติดต่อ
             email: "sorawee@example.com",
             github: "@soraweena",
 
@@ -32,7 +32,7 @@
                 { img: "cert1.jpg", title: "เกียรติบัตรใบที่ 1: กิจกรรมจิตอาสา" },
                 { img: "cert2.jpg", title: "เกียรติบัตรใบที่ 2: กิจกรรมภาษาอังกฤษ" },
                 { img: "cert3.jpg", title: "เกียรติบัตรใบที่ 3: กิจกรรมสร้างสรรค์นวัตกรรม" },
-                { img: "cert4.jpg", title: "เกียรติบัตรใบที่ 4: การประกวดโครงงานวิิทยาศาสตร์" },
+                { img: "cert4.jpg", title: "เกียรติบัตรใบที่ 4: การประกวดโครงงานวิทยาศาสตร์" },
                 { img: "cert5.jpg", title: "เกียรติบัตรใบที่ 5: กิจกรรมจิตอาสาที่โรงพยาบาล" },
                 { img: "cert6.jpg", title: "เกียรติบัตรใบที่ 6: กิจกรรมการแข่งขันทางวิชาการ" }
             ]
@@ -63,7 +63,6 @@
         .cert-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem; border: 1px solid #1c2541; }
         .cert-card p { font-size: 0.9rem; color: #e0e6ed; font-weight: 500; }
         footer { text-align: center; padding: 2rem; background-color: #0b132b; color: #a0aec0; font-size: 0.9rem; border-top: 1px solid #2a3a5e; }
-        /* สไตล์จัดการข้อความเว้นวรรคบรรทัด */
         #display-about { white-space: pre-line; }
     </style>
 </head>
@@ -111,7 +110,7 @@
             <div class="contact-info">
                 <p><strong>ชื่อ-นามสกุล:</strong> <span id="display-contact-name"></span></p>
                 <p><strong>อีเมล:</strong> <span id="display-email"></span></p>
-                <p><strong>Line ID:</strong> <span id="display-line"></span></p>
+                <p><strong>GitHub:</strong> <span id="display-github"></span></p>
             </div>
         </section>
     </div>
@@ -130,8 +129,7 @@
         document.getElementById('display-gpax').innerText = MY_DATA.gpax;
         document.getElementById('display-contact-name').innerText = MY_DATA.fullname;
         document.getElementById('display-email').innerText = MY_DATA.email;
-        document.getElementById('display-phone').innerText = MY_DATA.phone;
-        document.getElementById('display-line').innerText = MY_DATA.lineId;
+        document.getElementById('display-github').innerText = MY_DATA.github;
         document.getElementById('display-footer-name').innerText = MY_DATA.fullname;
 
         const certContainer = document.getElementById('display-certs');
