@@ -23,26 +23,37 @@
             background: linear-gradient(135deg, #1c2541 0%, #0b132b 100%);
             border-bottom: 3px solid #48cae4;
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 3rem 1rem;
+        }
+
+        /* รูปโปรไฟล์ */
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #48cae4;
+            box-shadow: 0 0 15px rgba(72, 202, 228, 0.4);
+            margin-bottom: 1rem;
         }
 
         .profile-title h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #ffffff;
             font-weight: 700;
         }
 
         .profile-title .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #48cae4;
             letter-spacing: 1px;
-            margin-top: 0.5rem;
+            margin-top: 0.3rem;
         }
 
         .tagline {
             font-size: 0.95rem;
             color: #a0aec0;
-            margin-top: 0.5rem;
+            margin-top: 0.3rem;
         }
 
         nav {
@@ -58,7 +69,7 @@
         nav a {
             color: #e0e6ed;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: 500;
             transition: color 0.3s;
         }
@@ -89,31 +100,7 @@
             padding-bottom: 0.5rem;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .skill-card {
-            background: #0b132b;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #48cae4;
-        }
-
-        .skill-card h4 {
-            color: #ffffff;
-            margin-bottom: 0.3rem;
-        }
-
-        .skill-card p {
-            font-size: 0.85rem;
-            color: #a0aec0;
-        }
-
-        .experience-card {
+        .card {
             background: #0b132b;
             border-radius: 8px;
             padding: 1.2rem;
@@ -121,21 +108,57 @@
             border: 1px solid #2a3a5e;
         }
 
-        .experience-card h3 {
+        .card h3 {
             color: #90e0ef;
             font-size: 1.1rem;
+            margin-bottom: 0.3rem;
         }
 
-        .experience-card .date {
+        .card .date {
             font-size: 0.85rem;
             color: #48cae4;
             margin-bottom: 0.5rem;
         }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
+        /* ตารางจัดวางเกียรติบัตร 6 ใบ */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .cert-card {
+            background: #0b132b;
+            border: 1px solid #2a3a5e;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: #48cae4;
+        }
+
+        .cert-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 0.8rem;
+            border: 1px solid #1c2541;
+        }
+
+        .cert-card p {
+            font-size: 0.9rem;
+            color: #e0e6ed;
+            font-weight: 500;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
         }
 
         footer {
@@ -150,72 +173,96 @@
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
+        <!-- ใส่ลิงก์/ชื่อไฟล์รูปโปรไฟล์ตรงนี้ -->
+        <img src="https://via.placeholder.com/160" alt="รูปโปรไฟล์สรวีย์" class="profile-img">
         <div class="profile-title">
             <h1>สรวีย์ นาจำปา</h1>
-            <p class="subtitle">Radiologic Technologist | นักรังสีเทคนิค</p>
+            <p class="subtitle">PORTFOLIO</p>
             <p class="tagline">คณะเทคนิคการแพทย์ สาขารังสีเทคนิค</p>
         </div>
     </header>
 
+    <!-- Navigation Bar -->
     <nav>
-        <a href="#about">เกี่ยวกับฉัน</a>
-        <a href="#skills">ความเชี่ยวชาญ</a>
-        <a href="#experience">ประวัติการฝึกปฏิบัติงาน</a>
-        <a href="#contact">ติดต่อ</a>
+        <a href="#about">ประวัติส่วนตัว</a>
+        <a href="#education">ประวัติการศึกษา</a>
+        <a href="#certificates">เกียรติบัตร</a>
+        <a href="#contact">ช่องทางการติดต่อ</a>
     </nav>
 
+    <!-- Main Content Container -->
     <div class="container">
 
+        <!-- About Section -->
         <section id="about">
-            <h2>🏥 เกี่ยวกับฉัน (About Me)</h2>
-            <p>สวัสดีครับ/ค่ะ ฉันชื่อ <strong>สรวีย์ นาจำปา</strong> นักศึกษา/บุคลากรด้านรังสีเทคนิค จากคณะเทคนิคการแพทย์ มีความมุ่งมั่นในการให้บริการด้านภาพถ่ายทางการแพทย์ (Diagnostic Imaging) ด้วยความแม่นยำ คำนึงถึงความปลอดภัยด้านรังสีของผู้ป่วยเป็นสำคัญ (ALARA Principle)</p>
+            <h2>👤 ประวัติส่วนตัว (Profile)</h2>
+            <p>สวัสดีครับ/ค่ะ ฉันชื่อ <strong>สรวีย์ นาจำปา</strong> มีความสนใจและมุ่งมั่นที่จะเข้าศึกษาต่อ/ทำงานใน **คณะเทคนิคการแพทย์ สาขารังสีเทคนิค** มีความตั้งใจที่จะนำความรู้ทางเทคโนโลยีภาพถ่ายทางการแพทย์และการดูแลความปลอดภัยด้านรังสี มาพัฒนาตนเองและช่วยสนับสนุนการวินิจฉัยทางการแพทย์ให้มีประสิทธิภาพสูงสุด</p>
         </section>
 
-        <section id="skills">
-            <h2>☢️ ทักษะและความเชี่ยวชาญ (Clinical Skills)</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4>General X-Ray</h4>
-                    <p>การจัดท่าทางรังสีวินิจฉัยพื้นฐานและพิเศษ</p>
-                </div>
-                <div class="skill-card">
-                    <h4>CT Scan & MRI</h4>
-                    <p>การสร้างภาพด้วยเครื่องเอกซเรย์คอมพิวเตอร์และคลื่นแม่เหล็กไฟฟ้า</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Radiation Safety</h4>
-                    <p>การป้องกันและบริหารจัดการปริมาณรังสีสะสม</p>
-                </div>
-                <div class="skill-card">
-                    <h4>PACS & DICOM</h4>
-                    <p>การจัดการระบบจัดเก็บและรับส่งภาพถ่ายทางการแพทย์</p>
-                </div>
+        <!-- Education Section -->
+        <section id="education">
+            <h2>🎓 ประวัติการศึกษา (Education)</h2>
+            <div class="card">
+                <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
+                <div class="date">แผนการเรียน วิทยาศาสตร์ - คณิตศาสตร์</div>
+                <p>โรงเรียนตัวอย่าง | เกรดเฉลี่ยสะสม (GPAX): X.XX</p>
             </div>
         </section>
 
-        <section id="experience">
-            <h2>🩺 ประวัติการฝึกปฏิบัติงาน (Clinical Practice)</h2>
-            <div class="experience-card">
-                <h3>นักศึกษาฝึกปฏิบัติงานรังสีวินิจฉัย — โรงพยาบาลตัวอย่าง</h3>
-                <div class="date">มกราคม 2026 - ปัจจุบัน</div>
-                <p>• ฝึกปฏิบัติการถ่ายภาพเอกซเรย์ทั่วไป (General Radiography)<br>
-                   • ช่วยจัดเตรียมและดูแลผู้ป่วยในการเข้ารับการตรวจ CT Scan และ Ultrasound<br>
-                   • ตรวจสอบคุณภาพภาพถ่ายทางการแพทย์ (Quality Control)</p>
+        <!-- Certificates Section (เกียรติบัตร 6 ใบ) -->
+        <section id="certificates">
+            <h2>📜 เกียรติบัตรและรางวัล (Certificates)</h2>
+            <div class="certificates-grid">
+                
+                <div class="cert-card">
+                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 1">
+                    <p>เกียรติบัตรใบที่ 1: ชื่อกิจกรรม/รางวัล</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 2">
+                    <p>เกียรติบัตรใบที่ 2: ชื่อกิจกรรม/รางวัล</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 3">
+                    <p>เกียรติบัตรใบที่ 3: ชื่อกิจกรรม/รางวัล</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 4">
+                    <p>เกียรติบัตรใบที่ 4: ชื่อกิจกรรม/รางวัล</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 5">
+                    <p>เกียรติบัตรใบที่ 5: ชื่อกิจกรรม/รางวัล</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 6">
+                    <p>เกียรติบัตรใบที่ 6: ชื่อกิจกรรม/รางวัล</p>
+                </div>
+
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
             <h2>📞 ช่องทางการติดต่อ (Contact)</h2>
             <div class="contact-info">
-                <p><strong>ชื่อ-สกุล:</strong> สรวีย์ นาจำปา (Sorawee Na Jampa)</p>
+                <p><strong>ชื่อ-นามสกุล:</strong> สรวีย์ นาจำปา (Sorawee Na Jampa)</p>
                 <p><strong>อีเมล:</strong> sorawee.naj@example.com</p>
                 <p><strong>เบอร์โทรศัพท์:</strong> 08X-XXX-XXXX</p>
+                <p><strong>ไลน์ / โซเชียลมีเดีย:</strong> @sorawee</p>
             </div>
         </section>
 
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Sorawee Na Jampa | Faculty of Associated Medical Sciences (Radiologic Technology)</p>
     </footer>
