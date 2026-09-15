@@ -3,188 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorawee Na Jampa - Radiologic Technology Portfolio</title>
+    <title>Portfolio - สรวีย์ นาจำปา</title>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ==========================================
+         ✏️ แก้ไขข้อมูลส่วนตัวตรงนี้ได้เลยครับ 
+         ========================================== -->
+    <script>
+        const MY_DATA = {
+            // 1. รูปโปรไฟล์ (ชื่อไฟล์รูปที่อัปโหลดขึ้น GitHub)
+            profileImage: "profile.jpg", 
+
+            // 2. ข้อมูลส่วนตัว
+            fullname: "สรวีย์ นาจำปา",
+            nickname: "สรวีย์",
+            faculty: "คณะเทคนิคการแพทย์ สาขารังสีเทคนิค",
+            gpax: "3.75", // เกรดเฉลี่ย
+            school: "โรงเรียนตัวอย่างวิทยา",
+            
+            aboutMe: "มีความสนใจและมุ่งมั่นที่จะเข้าศึกษาต่อในคณะเทคนิคการแพทย์ สาขารังสีเทคนิค มีความตั้งใจที่จะนำความรู้ทางเทคโนโลยีภาพถ่ายทางการแพทย์และการดูแลความปลอดภัยด้านรังสี มาพัฒนาตนเองและช่วยสนับสนุนการวินิจฉัยทางการแพทย์ให้มีประสิทธิภาพสูงสุด",
+
+            // 3. ช่องทางติดต่อ
+            email: "sorawee@example.com",
+            phone: "081-234-5678",
+            lineId: "sorawee_line",
+
+            // 4. รูปเกียรติบัตร 6 ใบ (ชื่อไฟล์รูป + คำอธิบาย)
+            certificates: [
+                { img: "cert1.jpg", title: "เกียรติบัตรใบที่ 1: รางวัลการแข่งขันวิทยาศาสตร์" },
+                { img: "cert2.jpg", title: "เกียรติบัตรใบที่ 2: เข้าร่วมการอบรมทาง медицин/วิชาการ" },
+                { img: "cert3.jpg", title: "เกียรติบัตรใบที่ 3: กิจกรรมจิตอาสาโรงพยาบาล" },
+                { img: "cert4.jpg", title: "เกียรติบัตรใบที่ 4: การประกวดนวัตกรรม" },
+                { img: "cert5.jpg", title: "เกียรติบัตรใบที่ 5: ผ่านการทดสอบทักษะภาษาอังกฤษ" },
+                { img: "cert6.jpg", title: "เกียรติบัตรใบที่ 6: นักเรียนดีเด่น / กิจกรรมโรงเรียน" }
+            ]
+        };
+    </script>
+    <!-- ========================================== -->
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Prompt', sans-serif;
-        }
-
-        body {
-            background-color: #0b132b;
-            color: #e0e6ed;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1c2541 0%, #0b132b 100%);
-            border-bottom: 3px solid #48cae4;
-            text-align: center;
-            padding: 3rem 1rem;
-        }
-
-        /* รูปโปรไฟล์ */
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #48cae4;
-            box-shadow: 0 0 15px rgba(72, 202, 228, 0.4);
-            margin-bottom: 1rem;
-        }
-
-        .profile-title h1 {
-            font-size: 2.2rem;
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        .profile-title .subtitle {
-            font-size: 1.1rem;
-            color: #48cae4;
-            letter-spacing: 1px;
-            margin-top: 0.3rem;
-        }
-
-        .tagline {
-            font-size: 0.95rem;
-            color: #a0aec0;
-            margin-top: 0.3rem;
-        }
-
-        nav {
-            background-color: #1c2541;
-            text-align: center;
-            padding: 0.8rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        nav a {
-            color: #e0e6ed;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #48cae4;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        section {
-            background: #1c2541;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            border: 1px solid #2a3a5e;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-
-        h2 {
-            color: #00b4d8;
-            margin-bottom: 1.2rem;
-            border-bottom: 2px solid #2a3a5e;
-            padding-bottom: 0.5rem;
-        }
-
-        .card {
-            background: #0b132b;
-            border-radius: 8px;
-            padding: 1.2rem;
-            margin-bottom: 1rem;
-            border: 1px solid #2a3a5e;
-        }
-
-        .card h3 {
-            color: #90e0ef;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .card .date {
-            font-size: 0.85rem;
-            color: #48cae4;
-            margin-bottom: 0.5rem;
-        }
-
-        /* ตารางจัดวางเกียรติบัตร 6 ใบ */
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .cert-card {
-            background: #0b132b;
-            border: 1px solid #2a3a5e;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-5px);
-            border-color: #48cae4;
-        }
-
-        .cert-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 0.8rem;
-            border: 1px solid #1c2541;
-        }
-
-        .cert-card p {
-            font-size: 0.9rem;
-            color: #e0e6ed;
-            font-weight: 500;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #0b132b;
-            color: #a0aec0;
-            font-size: 0.9rem;
-            border-top: 1px solid #2a3a5e;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Prompt', sans-serif; }
+        body { background-color: #0b132b; color: #e0e6ed; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #1c2541 0%, #0b132b 100%); border-bottom: 3px solid #48cae4; text-align: center; padding: 3rem 1rem; }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #48cae4; box-shadow: 0 0 15px rgba(72, 202, 228, 0.4); margin-bottom: 1rem; }
+        .profile-title h1 { font-size: 2.2rem; color: #ffffff; font-weight: 700; }
+        .profile-title .subtitle { font-size: 1.1rem; color: #48cae4; letter-spacing: 1px; margin-top: 0.3rem; }
+        .tagline { font-size: 0.95rem; color: #a0aec0; margin-top: 0.3rem; }
+        nav { background-color: #1c2541; text-align: center; padding: 0.8rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        nav a { color: #e0e6ed; text-decoration: none; margin: 0 12px; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #48cae4; }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        section { background: #1c2541; padding: 2rem; margin-bottom: 2rem; border-radius: 12px; border: 1px solid #2a3a5e; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        h2 { color: #00b4d8; margin-bottom: 1.2rem; border-bottom: 2px solid #2a3a5e; padding-bottom: 0.5rem; }
+        .card { background: #0b132b; border-radius: 8px; padding: 1.2rem; margin-bottom: 1rem; border: 1px solid #2a3a5e; }
+        .card h3 { color: #90e0ef; font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .card .date { font-size: 0.85rem; color: #48cae4; margin-bottom: 0.5rem; }
+        .certificates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        .cert-card { background: #0b132b; border: 1px solid #2a3a5e; border-radius: 8px; padding: 1rem; text-align: center; transition: transform 0.2s; }
+        .cert-card:hover { transform: translateY(-5px); border-color: #48cae4; }
+        .cert-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem; border: 1px solid #1c2541; }
+        .cert-card p { font-size: 0.9rem; color: #e0e6ed; font-weight: 500; }
+        footer { text-align: center; padding: 2rem; background-color: #0b132b; color: #a0aec0; font-size: 0.9rem; border-top: 1px solid #2a3a5e; }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
-        <!-- ใส่ลิงก์/ชื่อไฟล์รูปโปรไฟล์ตรงนี้ -->
-        <img src="https://via.placeholder.com/160" alt="รูปโปรไฟล์สรวีย์" class="profile-img">
+        <img id="display-profile" src="" alt="รูปโปรไฟล์" class="profile-img">
         <div class="profile-title">
-            <h1>สรวีย์ นาจำปา</h1>
+            <h1 id="display-name"></h1>
             <p class="subtitle">PORTFOLIO</p>
-            <p class="tagline">คณะเทคนิคการแพทย์ สาขารังสีเทคนิค</p>
+            <p class="tagline" id="display-faculty"></p>
         </div>
     </header>
 
-    <!-- Navigation Bar -->
     <nav>
         <a href="#about">ประวัติส่วนตัว</a>
         <a href="#education">ประวัติการศึกษา</a>
@@ -192,80 +84,63 @@
         <a href="#contact">ช่องทางการติดต่อ</a>
     </nav>
 
-    <!-- Main Content Container -->
     <div class="container">
-
-        <!-- About Section -->
         <section id="about">
             <h2>👤 ประวัติส่วนตัว (Profile)</h2>
-            <p>สวัสดีครับ/ค่ะ ฉันชื่อ <strong>สรวีย์ นาจำปา</strong> มีความสนใจและมุ่งมั่นที่จะเข้าศึกษาต่อ/ทำงานใน **คณะเทคนิคการแพทย์ สาขารังสีเทคนิค** มีความตั้งใจที่จะนำความรู้ทางเทคโนโลยีภาพถ่ายทางการแพทย์และการดูแลความปลอดภัยด้านรังสี มาพัฒนาตนเองและช่วยสนับสนุนการวินิจฉัยทางการแพทย์ให้มีประสิทธิภาพสูงสุด</p>
+            <p id="display-about"></p>
         </section>
 
-        <!-- Education Section -->
         <section id="education">
             <h2>🎓 ประวัติการศึกษา (Education)</h2>
             <div class="card">
                 <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
-                <div class="date">แผนการเรียน วิทยาศาสตร์ - คณิตศาสตร์</div>
-                <p>โรงเรียนตัวอย่าง | เกรดเฉลี่ยสะสม (GPAX): X.XX</p>
+                <div class="date">แผนการเรียน วิทยาศาสตร์ - 수학 / วิทยาศาสตร์ - คณิตศาสตร์</div>
+                <p><strong>สถานศึกษา:</strong> <span id="display-school"></span></p>
+                <p><strong>เกรดเฉลี่ยสะสม (GPAX):</strong> <span id="display-gpax"></span></p>
             </div>
         </section>
 
-        <!-- Certificates Section (เกียรติบัตร 6 ใบ) -->
         <section id="certificates">
-            <h2>📜 เกียรติบัตรและรางวัล (Certificates)</h2>
-            <div class="certificates-grid">
-                
-                <div class="cert-card">
-                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 1">
-                    <p>เกียรติบัตรใบที่ 1: ชื่อกิจกรรม/รางวัล</p>
-                </div>
-
-                <div class="cert-card">
-                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 2">
-                    <p>เกียรติบัตรใบที่ 2: ชื่อกิจกรรม/รางวัล</p>
-                </div>
-
-                <div class="cert-card">
-                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 3">
-                    <p>เกียรติบัตรใบที่ 3: ชื่อกิจกรรม/รางวัล</p>
-                </div>
-
-                <div class="cert-card">
-                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 4">
-                    <p>เกียรติบัตรใบที่ 4: ชื่อกิจกรรม/รางวัล</p>
-                </div>
-
-                <div class="cert-card">
-                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 5">
-                    <p>เกียรติบัตรใบที่ 5: ชื่อกิจกรรม/รางวัล</p>
-                </div>
-
-                <div class="cert-card">
-                    <img src="https://via.placeholder.com/300x200" alt="เกียรติบัตรใบที่ 6">
-                    <p>เกียรติบัตรใบที่ 6: ชื่อกิจกรรม/รางวัล</p>
-                </div>
-
-            </div>
+            <h2>📜 เกียรติบัตรและผลงาน (Certificates)</h2>
+            <div class="certificates-grid" id="display-certs"></div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact">
             <h2>📞 ช่องทางการติดต่อ (Contact)</h2>
             <div class="contact-info">
-                <p><strong>ชื่อ-นามสกุล:</strong> สรวีย์ นาจำปา (Sorawee Na Jampa)</p>
-                <p><strong>อีเมล:</strong> sorawee.naj@example.com</p>
-                <p><strong>เบอร์โทรศัพท์:</strong> 08X-XXX-XXXX</p>
-                <p><strong>ไลน์ / โซเชียลมีเดีย:</strong> @sorawee</p>
+                <p><strong>ชื่อ-นามสกุล:</strong> <span id="display-contact-name"></span></p>
+                <p><strong>อีเมล:</strong> <span id="display-email"></span></p>
+                <p><strong>เบอร์โทรศัพท์:</strong> <span id="display-phone"></span></p>
+                <p><strong>Line ID:</strong> <span id="display-line"></span></p>
             </div>
         </section>
-
     </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Sorawee Na Jampa | Faculty of Associated Medical Sciences (Radiologic Technology)</p>
+        <p>&copy; 2026 <span id="display-footer-name"></span> | Faculty of Associated Medical Sciences (Radiologic Technology)</p>
     </footer>
 
+    <!-- ดึงข้อมูลจากส่วนตั้งค่ามาแสดงผลอัตโนมัติ -->
+    <script>
+        document.getElementById('display-profile').src = MY_DATA.profileImage;
+        document.getElementById('display-name').innerText = MY_DATA.fullname;
+        document.getElementById('display-faculty').innerText = MY_DATA.faculty;
+        document.getElementById('display-about').innerText = MY_DATA.aboutMe;
+        document.getElementById('display-school').innerText = MY_DATA.school;
+        document.getElementById('display-gpax').innerText = MY_DATA.gpax;
+        document.getElementById('display-contact-name').innerText = MY_DATA.fullname;
+        document.getElementById('display-email').innerText = MY_DATA.email;
+        document.getElementById('display-phone').innerText = MY_DATA.phone;
+        document.getElementById('display-line').innerText = MY_DATA.lineId;
+        document.getElementById('display-footer-name').innerText = MY_DATA.fullname;
+
+        const certContainer = document.getElementById('display-certs');
+        MY_DATA.certificates.forEach(cert => {
+            const certCard = document.createElement('div');
+            certCard.className = 'cert-card';
+            certCard.innerHTML = `<img src="${cert.img}" alt="${cert.title}"><p>${cert.title}</p>`;
+            certContainer.appendChild(certCard);
+        });
+    </script>
 </body>
 </html>
